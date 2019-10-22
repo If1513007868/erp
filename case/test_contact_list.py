@@ -1,6 +1,7 @@
 import unittest
 import requests
 import random
+from case.login_bzj import host
 from case.login_bzj import refreshToken
 
 
@@ -8,35 +9,38 @@ from case.login_bzj import refreshToken
 
 class Obtain_Contact(unittest.TestCase):
     #获取联系人列表
-    u = "http://172.16.20.152:7040/api/ec/"
+
     hearders = {
 
         "Authorization": refreshToken
     }
     def test_contact_list(self):
         u'''获取联系人列表'''
-        url = self.u+"user/auth/getContactList"
+        url = host+"user/auth/getContactList"
         data = {"pageNum": "1", "pageSize": "40", }
-        # hearders = {
-        #
-        #     "Authorization": refreshToken
-        # }
         res = requests.get(url, data, headers=self.hearders)
         res.content.decode('utf-8')
         result = res.json()
     #打印联系人列表
-        print(res.json())
+        #print(res.json())
     # 检验联系人是否获取成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '联系人获取成功')
+    #获取联系人Id(第一个，删除用)
+        self.get_id = (result["result"]["data"][1]["id"])
+
 
         return res.json()
-#添加联系人
+
+    #添加联系人
     def test_addcontact(self):
-        url = self.u + "user/auth/addContact"
+        u'''添加联系人列表'''
+        url = host + "user/auth/addContact"
+
     #随机取身份证号
         foo = ['110101199003070679', '110101199003075250', '110101199003074696', '110101199003070054', '110101199003077299']
         cardNo = random.choice(foo)
+
     # 随机取姓名
         roo = ['测试一','测试二','测试三','测试四','测试五']
         name = random.choice(roo)
@@ -63,27 +67,35 @@ class Obtain_Contact(unittest.TestCase):
         res.content.decode('utf-8')
         result = res.json()
         print(res.json())
+
     # 检验联系人是否添加成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '添加常用联系人成功')
         return res.json()
     def test_delcontact(self):
-        url = self.u + "/user/auth/deleteContactById"
-        data = {"id": "495"}
+        u'''删除联系人'''
+
+    #得到联系人Id
+        self.test_contact_list()
+        Id = self.get_id
+
+        url = host + "/user/auth/deleteContactById"
+        data = {"id":Id }
         res = requests.delete(url,params=data,headers=self.hearders)
         res.content.decode('utf-8')
         result = res.json()
-        print(res.json())
+        #print(res.json())
         self.assertEqual(result["code"], '100100')
-        self.assertEqual(result["msg"], '添加常用联系人成功')
+        self.assertEqual(result["msg"], '删除联系人成功')
 
     def test_delcontact1(self):
-        url = self.u + "/user/auth/deleteContactById"
+        u'''删除已删除的联系人'''
+        url = host + "/user/auth/deleteContactById"
         data = {"id": "495"}
         res = requests.delete(url,params=data,headers=self.hearders)
         res.content.decode('utf-8')
         result = res.json()
-        print(res.json())
+        #print(res.json())
         self.assertEqual(result["code"], '406001')
         self.assertEqual(result["msg"], '删除联系人失败')
 

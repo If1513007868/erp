@@ -1,4 +1,4 @@
-#Python 报错  导入urllib3    urllib3.disable_warnings()
+#Python 报错    导入urllib3    urllib3.disable_warnings()
 
 import unittest
 
@@ -61,7 +61,7 @@ class Verify_login(unittest.TestCase):
         phone = ""
         credential = "123456"
         result = self.ver.login(phone, credential)
-        print(result)
+
         self.assertEqual(result["code"], '401002')
         self.assertEqual(result["msg"], '参数为空')
 

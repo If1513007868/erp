@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>我的自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-10-22 10:58:35</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:02.449277</p>
-<p class='attribute'><strong>Status:</strong> Pass 11 Failure 3</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-10-22 12:05:01</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:02.490907</p>
+<p class='attribute'><strong>Status:</strong> Pass 13 Failure 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -248,15 +248,15 @@ function showOutput(id, name) {
 ft1.1: Traceback (most recent call last):
   File "/Users/mac/Desktop/test_yo/case/test_02.py", line 47, in test_check_contact
     self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-AssertionError: '110101199003074696' != '13013319930311093X'
-- 110101199003074696
+AssertionError: '110101199003077299' != '13013319930311093X'
+- 110101199003077299
 + 13013319930311093X
 
 Traceback (most recent call last):
   File "/Users/mac/Desktop/test_yo/case/test_02.py", line 47, in test_check_contact
     self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-AssertionError: '110101199003074696' != '13013319930311093X'
-- 110101199003074696
+AssertionError: '110101199003077299' != '13013319930311093X'
+- 110101199003077299
 + 13013319930311093X
 
 
@@ -292,17 +292,17 @@ pt1.2:
     </td>
 </tr>
 
-<tr class='failClass'>
-    <td>case.contact_list.Obtain_Contact</td>
-    <td>4</td>
-    <td>3</td>
+<tr class='passClass'>
+    <td>test_contact_gotId.check_contact</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',4)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
 </tr>
 
 <tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_addcontact</div></td>
+    <td class='none'><div class='testcase'>test_getId</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -325,22 +325,55 @@ pt2.1:
     </td>
 </tr>
 
-<tr id='pt2.2' class='hiddenRow'>
+<tr class='passClass'>
+    <td>test_contact_list.Obtain_Contact</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',4)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addcontact</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_contact_list: 获取联系人列表</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
         pass</a>
 
-    <div id='div_pt2.2' class="popup_window">
+    <div id='div_pt3.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.2: 
+pt3.2: 
 
         </pre>
     </div>
@@ -349,36 +382,22 @@ pt2.2:
     </td>
 </tr>
 
-<tr id='ft2.3' class='none'>
-    <td class='failCase'><div class='testcase'>test_delcontact</div></td>
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_delcontact</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
 
-    <div id='div_ft2.3' class="popup_window">
+    <div id='div_pt3.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.3: Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/contact_list.py", line 77, in test_delcontact
-    self.assertEqual(result["code"], '100100')
-AssertionError: '406001' != '100100'
-- 406001
-+ 100100
-
-Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/contact_list.py", line 77, in test_delcontact
-    self.assertEqual(result["code"], '100100')
-AssertionError: '406001' != '100100'
-- 406001
-+ 100100
-
-
+pt3.3: 
 
         </pre>
     </div>
@@ -387,69 +406,22 @@ AssertionError: '406001' != '100100'
     </td>
 </tr>
 
-<tr id='pt2.4' class='hiddenRow'>
+<tr id='pt3.4' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_delcontact1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
         pass</a>
 
-    <div id='div_pt2.4' class="popup_window">
+    <div id='div_pt3.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.4: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='failClass'>
-    <td>test_check_contact.check_contact</td>
-    <td>1</td>
-    <td>0</td>
-    <td>1</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
-</tr>
-
-<tr id='ft3.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_check_contact: 校验联系人知否正确信息</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
-        fail</a>
-
-    <div id='div_ft3.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft3.1: Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/test_check_contact.py", line 22, in test_check_contact
-    self.assertEqual(result["result"]["data"][0]["name"], '保之家')
-AssertionError: '测试二' != '保之家'
-- 测试二
-+ 保之家
-
-Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/test_check_contact.py", line 22, in test_check_contact
-    self.assertEqual(result["result"]["data"][0]["name"], '保之家')
-AssertionError: '测试二' != '保之家'
-- 测试二
-+ 保之家
-
-
+pt3.4: 
 
         </pre>
     </div>
@@ -524,8 +496,8 @@ pt4.6:
 <tr id='total_row'>
     <td>Total</td>
     <td>14</td>
-    <td>11</td>
-    <td>3</td>
+    <td>13</td>
+    <td>1</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

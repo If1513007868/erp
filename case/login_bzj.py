@@ -2,9 +2,24 @@
 import unittest
 import requests
 
+host ='http://172.16.20.152:7040/api/ec/'
+
+#定义一个全局变量
+# def text():
+#     global host
+#     host = "C语言中文网"
+#     print("函数体内访问：", host)
+#text()
+print('函数体外访问：', host)
+
 class Bzj_login(unittest.TestCase):
+
+
+
+
+
     def login(self,phone,credential):
-        url = 'http://172.16.20.152:7040/api/ec/login'
+        url = host+'login'
         hearders = {
 
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0",
@@ -26,10 +41,10 @@ class Bzj_login(unittest.TestCase):
         #print(res.content.decode('utf-8'))  #将英文转化成汉字
         return res.json()
 
-
+#获取token
 test = Bzj_login()
 res = test.login(15130078689, 123456)
 refreshToken = res['result']['token']
-print(refreshToken)
+
 if __name__ == "__main__":
     unittest.main()

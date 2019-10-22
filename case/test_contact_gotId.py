@@ -1,24 +1,28 @@
 import unittest
 import requests
+from case.login_bzj import host
 from case.login_bzj import refreshToken
 class check_contact(unittest.TestCase):
-    u = "http://172.16.20.152:7040/api/ec/"
+
     hearders = {
 
         "Authorization": refreshToken
     }
     def test_getId(self):
-        url = self.u+"user/auth/getContactById"
+        url = host+"user/auth/getContactById"
         data = {"id": "478" }
         res = requests.get(url, data, headers=self.hearders)
         res.content.decode('utf-8')
         result = res.json()
-        # 打印联系人列表
-        print(res.json())
-        # 检验联系人是否获取成功
+
+    # 打印联系人列表
+        #print(res.json())
+
+    # 检验联系人是否获取成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '联系人获取成功')
-        # 检验联系人数据是否正确
+
+    # 检验联系人数据是否正确
 
         self.assertEqual(result["result"]["name"], '保之家')
         self.assertEqual(result["result"]["cardNo"], '13013319930311093X')
@@ -33,16 +37,6 @@ class check_contact(unittest.TestCase):
 
         return res.json()
 
-
-# 校验联系人知否正确信息
-#     def test_check_contact(self):
-#         u'''校验联系人知否正确信息'''
-#
-#         result = self.check.test_contact_list()
-#         #获取联系人总数
-#         total = result["result"]["total"]
-#         self.assertEqual(result["result"]["total"], total)
-#
 
 
 if __name__ == "__main__":
