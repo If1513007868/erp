@@ -1,35 +1,50 @@
 import unittest
-from case.contact_list import Obtain_Contact
+import requests
+from case.login_bzj import refreshToken
 class check_contact(unittest.TestCase):
-    check = Obtain_Contact()
+    u = "http://172.16.20.152:7040/api/ec/"
+    hearders = {
 
-# 校验联系人知否正确信息
-    def test_check_contact(self):
-        u'''校验联系人知否正确信息'''
-
-        result = self.check.test_contact_list()
-        #获取联系人总数
-        total = result["result"]["total"]
-        self.assertEqual(result["result"]["total"], total)
-
-        #print(result["result"]["data"][0]["name"])
-#检验联系人是否获取成功
+        "Authorization": refreshToken
+    }
+    def test_getId(self):
+        url = self.u+"user/auth/getContactById"
+        data = {"id": "478" }
+        res = requests.get(url, data, headers=self.hearders)
+        res.content.decode('utf-8')
+        result = res.json()
+        # 打印联系人列表
+        print(res.json())
+        # 检验联系人是否获取成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '联系人获取成功')
-# 检验联系人数据是否正确
-        self.assertEqual(result["result"]["pageNum"], 1)
-        self.assertEqual(result["result"]["pageSize"], 40)
-        self.assertEqual(result["result"]["data"][0]["name"], '保之家')
-        self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-        self.assertEqual(result["result"]["data"][0]["birthday"], 731779200000)
-        self.assertEqual(result["result"]["data"][0]["englishName"], 'baobao')
-        self.assertEqual(result["result"]["data"][0]["cardType"], 'IDENTITY')
-        self.assertEqual(result["result"]["data"][0]["phone"], '15130000001')
-        self.assertEqual(result["result"]["data"][0]["zipCode"], '051530')
-        self.assertEqual(result["result"]["data"][0]["mail"], '756016656@qq.com')
-        self.assertEqual(result["result"]["data"][0]["sex"], 1)
-        self.assertEqual(result["result"]["data"][0]["address"], '北京市北京经济技术开发区荣华中路8号院4号楼11层1102')
+        # 检验联系人数据是否正确
+
+        self.assertEqual(result["result"]["name"], '保之家')
+        self.assertEqual(result["result"]["cardNo"], '13013319930311093X')
+        self.assertEqual(result["result"]["birthday"], 731779200000)
+        self.assertEqual(result["result"]["englishName"], 'baobao')
+        self.assertEqual(result["result"]["cardType"], 'IDENTITY')
+        self.assertEqual(result["result"]["phone"], '15130000001')
+        self.assertEqual(result["result"]["zipCode"], '051530')
+        self.assertEqual(result["result"]["mail"], '756016656@qq.com')
+        self.assertEqual(result["result"]["sex"], 1)
+        self.assertEqual(result["result"]["address"], '北京市北京经济技术开发区荣华中路8号院4号楼11层1102')
+
+        return res.json()
+
+
+# 校验联系人知否正确信息
+#     def test_check_contact(self):
+#         u'''校验联系人知否正确信息'''
+#
+#         result = self.check.test_contact_list()
+#         #获取联系人总数
+#         total = result["result"]["total"]
+#         self.assertEqual(result["result"]["total"], total)
+#
 
 
 if __name__ == "__main__":
     unittest.main()
+
