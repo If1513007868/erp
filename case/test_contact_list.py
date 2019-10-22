@@ -1,3 +1,7 @@
+#/user/auth/getContactList 获取常用联系人列表
+#/user/auth/addContact 添加常用联系人
+#/user/auth/deleteContactById根据id删除常用联系人
+
 import unittest
 import requests
 import random

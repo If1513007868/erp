@@ -1,6 +1,7 @@
-
+#/login登录管理   /login
 import unittest
 import requests
+
 
 host ='http://172.16.20.152:7040/api/ec/'
 

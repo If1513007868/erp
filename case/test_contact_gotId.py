@@ -1,3 +1,4 @@
+#/user/auth/getContactList  校验联系人信息
 import unittest
 import requests
 from case.login_bzj import host

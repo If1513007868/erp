@@ -1,7 +1,7 @@
 #Python 报错    导入urllib3    urllib3.disable_warnings()
+#验证登录
 
 import unittest
-
 from case.login_bzj import Bzj_login
 class Verify_login(unittest.TestCase):
     ver = Bzj_login()
