@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>我的自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-10-22 12:05:01</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:02.490907</p>
-<p class='attribute'><strong>Status:</strong> Pass 13 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-10-22 17:57:07</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:02.447394</p>
+<p class='attribute'><strong>Status:</strong> Pass 12</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,88 +221,31 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>test_02.Obtain_Contact</td>
-    <td>2</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
-</tr>
-
-<tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_check_contact</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
-
-    <div id='div_ft1.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.1: Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/test_02.py", line 47, in test_check_contact
-    self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-AssertionError: '110101199003077299' != '13013319930311093X'
-- 110101199003077299
-+ 13013319930311093X
-
-Traceback (most recent call last):
-  File "/Users/mac/Desktop/test_yo/case/test_02.py", line 47, in test_check_contact
-    self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-AssertionError: '110101199003077299' != '13013319930311093X'
-- 110101199003077299
-+ 13013319930311093X
-
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_contact_list</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        pass</a>
-
-    <div id='div_pt1.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt1.2: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
 <tr class='passClass'>
     <td>test_contact_gotId.check_contact</td>
     <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getId</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_contact_list.Obtain_Contact</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',4)">Detail</a></td>
 </tr>
 
 <tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_getId</div></td>
+    <td class='none'><div class='testcase'>test_addcontact: 添加联系人列表</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -325,17 +268,32 @@ pt2.1:
     </td>
 </tr>
 
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_contact_list: 获取联系人列表</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_delcontact: 删除联系人</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_delcontact1: 删除已删除的联系人</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr class='passClass'>
-    <td>test_contact_list.Obtain_Contact</td>
-    <td>4</td>
-    <td>4</td>
+    <td>test_login.Verify_login</td>
+    <td>7</td>
+    <td>7</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',4)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c3',7)">Detail</a></td>
 </tr>
 
 <tr id='pt3.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_addcontact</div></td>
+    <td class='none'><div class='testcase'>test_login1: 登录用例，正确账号密码</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -359,145 +317,40 @@ pt3.1:
 </tr>
 
 <tr id='pt3.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_contact_list: 获取联系人列表</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
-        pass</a>
-
-    <div id='div_pt3.2' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.2: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt3.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_delcontact</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
-        pass</a>
-
-    <div id='div_pt3.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.3: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt3.4' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_delcontact1</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
-        pass</a>
-
-    <div id='div_pt3.4' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt3.4: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_login.Verify_login</td>
-    <td>7</td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',7)">Detail</a></td>
-</tr>
-
-<tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login1: 登录用例，正确账号密码</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt4.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login2: 登录用例，账号正确，密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.3' class='hiddenRow'>
+<tr id='pt3.3' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login3: 登录用例，账号正确，密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.4' class='hiddenRow'>
+<tr id='pt3.4' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login4: 登录用例，账号密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.5' class='hiddenRow'>
+<tr id='pt3.5' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login5: 登录用例，账号密码为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.6' class='hiddenRow'>
+<tr id='pt3.6' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login6: 登录用例，账号密码为空</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
-        pass</a>
-
-    <div id='div_pt4.6' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt4.6: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
+    <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.7' class='hiddenRow'>
+<tr id='pt3.7' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login7: 登录用例，账号密码为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>14</td>
-    <td>13</td>
-    <td>1</td>
+    <td>12</td>
+    <td>12</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

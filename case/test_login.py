@@ -14,7 +14,7 @@ class Verify_login(unittest.TestCase):
         credential = "123456"
         result = self.ver.login(phone,credential)
         # 在调用函数后打印返回值
-        # print(result)
+        print(result)
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"],'请求成功' )
         self.assertEqual(result["result"]["phone"],"15130078689")

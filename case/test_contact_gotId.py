@@ -9,7 +9,9 @@ class check_contact(unittest.TestCase):
 
         "Authorization": refreshToken
     }
+#根据ID获取联系人
     def test_getId(self):
+        u'''根据ID获取联系人'''
         url = host+"user/auth/getContactById"
         data = {"id": "478" }
         res = requests.get(url, data, headers=self.hearders)
@@ -37,6 +39,32 @@ class check_contact(unittest.TestCase):
         self.assertEqual(result["result"]["address"], '北京市北京经济技术开发区荣华中路8号院4号楼11层1102')
 
         return res.json()
+#根据ID获取联系人(id为空)
+    def test_getId1(self):
+        u'''根据ID获取联系人(id为空)'''
+        url = host+"user/auth/getContactById"
+        data = {"id": "" }
+        res = requests.get(url, data, headers=self.hearders)
+        res.content.decode('utf-8')
+        result = res.json()
+
+        # 检验联系人是否获取成功
+        self.assertEqual(result["code"], '400 BAD_REQUEST')
+        self.assertEqual(result["msg"], '缺少参数!')
+#缺少token)
+    def test_getId2(self):
+        u'''缺少token)'''
+        url = host+"user/auth/getContactById"
+        data = {"id": "" }
+        res = requests.get(url, data)
+        res.content.decode('utf-8')
+        result = res.json()
+        print(result)
+
+        # 检验联系人是否获取成功
+        self.assertEqual(result["code"], '403012')
+        self.assertEqual(result["msg"], '非授权访问，无效的token')
+
 
 
 

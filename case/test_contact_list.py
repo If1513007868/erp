@@ -1,6 +1,6 @@
 #/user/auth/getContactList 获取常用联系人列表
 #/user/auth/addContact 添加常用联系人
-#/user/auth/deleteContactById根据id删除常用联系人
+#/user/auth/deleteContactById 根据id删除常用联系人
 
 import unittest
 import requests
@@ -18,6 +18,7 @@ class Obtain_Contact(unittest.TestCase):
 
         "Authorization": refreshToken
     }
+#获取联系人列表
     def test_contact_list(self):
         u'''获取联系人列表'''
         url = host+"user/auth/getContactList"
@@ -36,7 +37,7 @@ class Obtain_Contact(unittest.TestCase):
 
         return res.json()
 
-    #添加联系人
+#添加联系人
     def test_addcontact(self):
         u'''添加联系人列表'''
         url = host + "user/auth/addContact"
@@ -76,6 +77,9 @@ class Obtain_Contact(unittest.TestCase):
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '添加常用联系人成功')
         return res.json()
+
+#删除联系人
+
     def test_delcontact(self):
         u'''删除联系人'''
 
@@ -92,7 +96,27 @@ class Obtain_Contact(unittest.TestCase):
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '删除联系人成功')
 
+#删除联系人（Id为空
+
     def test_delcontact1(self):
+        u'''删除联系人（Id为空）'''
+
+    #得到联系人Id
+        #self.test_contact_list()
+        #Id = self.get_id
+
+        url = host + "/user/auth/deleteContactById"
+        data = {"id":"" }
+        res = requests.delete(url,params=data,headers=self.hearders)
+        res.content.decode('utf-8')
+        result = res.json()
+        #print(res.json())
+        self.assertEqual(result["code"], '400 BAD_REQUEST')
+        self.assertEqual(result["msg"], '缺少参数!')
+
+#删除已删除的联系人
+
+    def test_delcontact2(self):
         u'''删除已删除的联系人'''
         url = host + "/user/auth/deleteContactById"
         data = {"id": "495"}
