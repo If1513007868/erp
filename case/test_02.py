@@ -10,13 +10,13 @@ class Obtain_Contact(unittest.TestCase):
 #获取联系人列表
 
     def test_contact_list(self):
-        url = "http://172.16.20.152:7040/api/ec/user/auth/getUserInfo"
-        data = {"id": "45"}
+        url = "http://172.16.20.152:7040/api/ec/user/auth/replaceVerify"
+        data = {"password": "1234","type": "password"}
         hearders = {
 
             "Authorization": refreshToken
         }
-        res = requests.get(url, data, headers=hearders)
+        res = requests.post(url, data, headers=hearders)
         res.content.decode('utf-8')
         print(res.json())
         return res.json()
