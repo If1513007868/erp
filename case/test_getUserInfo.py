@@ -7,7 +7,7 @@ from case.login_bzj import host
 from case.login_bzj import refreshToken
 
 class Get_Userinfo(unittest.TestCase):
-    #获取用户信息
+#根据ID获取用户信息
     def test_getuser(self):
         u'''根据ID获取用户信息'''
         data = {"id": "45"}
@@ -34,6 +34,8 @@ class Get_Userinfo(unittest.TestCase):
 
         return res.json()
 
+#ID为空
+
     def test_getuser1(self):
         #请求到500是因为url把id加到后面传进去了，造成链接是错了
         u'''ID为空'''
@@ -52,7 +54,7 @@ class Get_Userinfo(unittest.TestCase):
         self.assertEqual(result["code"], '400 BAD_REQUEST')
         self.assertEqual(result["msg"], '缺少参数!')
 
-
+#token为空
     def test_getuser2(self):
         u'''token为空'''
 

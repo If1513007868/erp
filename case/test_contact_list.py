@@ -71,11 +71,51 @@ class Obtain_Contact(unittest.TestCase):
         res = requests.post(url,json=payload, headers=self.hearders)
         res.content.decode('utf-8')
         result = res.json()
-        print(res.json())
+        #print(res.json())
 
     # 检验联系人是否添加成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '添加常用联系人成功')
+        return res.json()
+#添加联系人列表(token为空)
+    def test_addcontact_k(self):
+        u'''添加联系人列表(token为空)'''
+        url = host + "user/auth/addContact"
+
+    #随机取身份证号
+        foo = ['110101199003070679', '110101199003075250', '110101199003074696', '110101199003070054', '110101199003077299']
+        cardNo = random.choice(foo)
+
+    # 随机取姓名
+        roo = ['测试一','测试二','测试三','测试四','测试五']
+        name = random.choice(roo)
+
+        payload = {
+
+            "address": "北京市北京经济技术开发区荣华中路8号院4号楼11层1102",
+            "birthday": "2019-10-21T08:47:54.523Z",
+            "cardNo": cardNo,
+            "cardType": "IDENTITY",
+            "city": "3",
+            "englishName": "baobao",
+            "id": 0,
+            "mail": "756016656@qq.com",
+            "name": name,
+            "phone": "15130078689",
+            "province": "2",
+            "relation": "SELF",
+            "sex": 1,
+            "userId": 0,
+            "zipCode": "051530"
+        }
+        res = requests.post(url,json=payload)
+        res.content.decode('utf-8')
+        result = res.json()
+        #print(res.json())
+
+    # 检验联系人是否添加成功
+        self.assertEqual(result["code"], '403012')
+        self.assertEqual(result["msg"], '非授权访问，无效的token')
         return res.json()
 
 #删除联系人
@@ -126,6 +166,23 @@ class Obtain_Contact(unittest.TestCase):
         #print(res.json())
         self.assertEqual(result["code"], '406001')
         self.assertEqual(result["msg"], '删除联系人失败')
+
+#删除联系人（token为空）
+    def test_delcontact4(self):
+        u'''删除联系人（token为空）'''
+
+    #得到联系人Id
+        self.test_contact_list()
+        Id = self.get_id
+
+        url = host + "/user/auth/deleteContactById"
+        data = {"id":Id }
+        res = requests.delete(url,params=data)
+        res.content.decode('utf-8')
+        result = res.json()
+        #print(res.json())
+        self.assertEqual(result["code"], '403012')
+        self.assertEqual(result["msg"], '非授权访问，无效的token')
 
 
 
