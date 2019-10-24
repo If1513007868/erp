@@ -4,7 +4,7 @@
 import unittest
 import requests
 from case.login_bzj import host
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 
 class Get_Userinfo(unittest.TestCase):
 #根据ID获取用户信息
@@ -13,7 +13,7 @@ class Get_Userinfo(unittest.TestCase):
         data = {"id": "45"}
         hearders = {
 
-            "Authorization": refreshToken
+            "Authorization": getToken
         }
         url = host + "user/auth/getUserInfo"
         res = requests.get(url, data, headers=hearders)
@@ -42,7 +42,7 @@ class Get_Userinfo(unittest.TestCase):
         data = {"":""}
         hearders = {
 
-            "Authorization": refreshToken
+            "Authorization": getToken
         }
         url = host + "user/auth/getUserInfo"
         res = requests.get(url, data, headers=hearders)

@@ -2,7 +2,7 @@
 import unittest
 import requests
 
-
+s = requests.sessions
 host ='http://172.16.20.152:7040/api/ec/'
 
 #定义一个全局变量
@@ -45,7 +45,7 @@ class Bzj_login(unittest.TestCase):
 #获取token
 test = Bzj_login()
 res = test.login(15130078689, 123456)
-refreshToken = res['result']['token']
+getToken = res['result']['token']
 
 if __name__ == "__main__":
     unittest.main()

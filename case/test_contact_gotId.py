@@ -2,12 +2,12 @@
 import unittest
 import requests
 from case.login_bzj import host
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 class check_contact(unittest.TestCase):
 
     hearders = {
 
-        "Authorization": refreshToken
+        "Authorization": getToken
     }
 #根据ID获取联系人
     def test_getId(self):

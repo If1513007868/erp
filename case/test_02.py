@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 import time
 import requests
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 
 
 class Obtain_Contact(unittest.TestCase):
@@ -15,7 +15,7 @@ class Obtain_Contact(unittest.TestCase):
         data = {"mail": "756016656@qq.com"}
         hearders = {
 
-            "Authorization": refreshToken
+            "Authorization": getToken
         }
         res = requests.post(url, data, headers=hearders)
         res.content.decode('utf-8')

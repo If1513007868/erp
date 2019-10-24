@@ -1,13 +1,13 @@
 import unittest
 import requests
 from case.login_bzj import host
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 
 
 class Send_MailVCode(unittest.TestCase):
     hearders = {
 
-        "Authorization": refreshToken
+        "Authorization": getToken
     }
 #发送邮箱验证码
     def test_mailvcode(self):

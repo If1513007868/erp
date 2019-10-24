@@ -6,7 +6,7 @@ import unittest
 import requests
 import random
 from case.login_bzj import host
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 
 
 
@@ -16,7 +16,7 @@ class Obtain_Contact(unittest.TestCase):
 
     hearders = {
 
-        "Authorization": refreshToken
+        "Authorization": getToken
     }
 #获取联系人列表
     def test_contact_list(self):

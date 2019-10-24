@@ -3,12 +3,12 @@
 import unittest
 import requests
 from case.login_bzj import host
-from case.login_bzj import refreshToken
+from case.login_bzj import getToken
 
 class ModifyPassword(unittest.TestCase):
     hearders = {
 
-        "Authorization": refreshToken
+        "Authorization": getToken
     }
 # 修改密码
     def test_modpwd(self):
