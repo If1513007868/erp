@@ -1,40 +1,32 @@
 import unittest
-from selenium import webdriver
-import time
-import requests
-from case.login_bzj import getToken
+from case.login_bzj import Bzj_login
+from common.logger import Log
 
 
-class Obtain_Contact(unittest.TestCase):
 
-#获取联系人列表
+class Verify_login(unittest.TestCase):
+    ver = Bzj_login()
+    log = Log()
 
-    def test_contact_list(self):
 
-        url = "http://172.16.20.152:7040/api/ec/user/auth/sendMailVCode"
-        data = {"mail": "756016656@qq.com"}
-        hearders = {
 
-            "Authorization": getToken
-        }
-        res = requests.post(url, data, headers=hearders)
-        res.content.decode('utf-8')
-        print(res.json())
-        return res.json()
-#
-# #校验联系人信息
-#     def test_check_contact(self):
-#         result = self.test_contact_list()
-#         #获取联系人总数
-#         total = result["result"]["total"]
-#         print(result["result"]["data"][0]["name"])
-#         self.assertEqual(result["code"],'100100')
-#         self.assertEqual(result["msg"], '联系人获取成功')
-#         self.assertEqual(result["result"]["pageNum"], 1)
-#         self.assertEqual(result["result"]["pageSize"], 40)
-#         self.assertEqual(result["result"]["total"],total)
-#         self.assertEqual(result["result"]["data"][0]["cardNo"],'13013319930311093X')
-#         self.assertEqual(result["result"]["data"][0]["birthday"], 731779200000)
+#1.正确的账号密码
+
+    def test_login1(self):
+
+        u'''登录用例，正确账号密码'''
+        self.log.info("===start====")
+        phone = "15130078689"
+        credential = "123456"
+        result = self.ver.login(phone,credential)
+        self.log.info(u'''调取登录结果：%s'''%result["msg"])
+        # # 在调用函数后打印返回值
+        #print(result)
+        self.assertEqual(result["code"], '100100')
+        # self.assertEqual(result["msg"],'请求成功' )
+        # self.assertEqual(result["result"]["phone"],"15130078689")
+        self.log.info("===end====")
+
 
 
 
