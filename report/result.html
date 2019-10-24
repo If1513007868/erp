@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>我的自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-10-24 09:18:33</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:06.506124</p>
-<p class='attribute'><strong>Status:</strong> Pass 34</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-10-24 12:03:07</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:19.971135</p>
+<p class='attribute'><strong>Status:</strong> Pass 41</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -342,12 +342,12 @@ pt2.3:
 </tr>
 
 <tr class='passClass'>
-    <td>test_eplaceVerify.EplaceVerify</td>
-    <td>8</td>
-    <td>8</td>
+    <td>test_eplace_verify.EplaceVerify</td>
+    <td>9</td>
+    <td>9</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',8)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c4',9)">Detail</a></td>
 </tr>
 
 <tr id='pt4.1' class='hiddenRow'>
@@ -390,8 +390,13 @@ pt2.3:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
+<tr id='pt4.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pwdtoken: token为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr class='passClass'>
-    <td>test_getUserInfo.Get_Userinfo</td>
+    <td>test_get_userinfo.Get_Userinfo</td>
     <td>3</td>
     <td>3</td>
     <td>0</td>
@@ -498,11 +503,11 @@ pt6.1:
 
 <tr class='passClass'>
     <td>test_modifyPassword.ModifyPassword</td>
-    <td>5</td>
-    <td>5</td>
+    <td>6</td>
+    <td>6</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c7',5)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c7',6)">Detail</a></td>
 </tr>
 
 <tr id='pt7.1' class='hiddenRow'>
@@ -530,10 +535,49 @@ pt6.1:
     <td colspan='5' align='center'>pass</td>
 </tr>
 
+<tr id='pt7.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwdtoken: 没有token</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_sendmailvcode.Send_MailVCode</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',5)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_mailvcode: 发送邮箱验证码</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_mailvcode1: 发送邮箱验证码没有token）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt8.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_mailvcode2: 发送邮箱验证码邮箱为空）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt8.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_mailvcode3: 发送邮箱验证码（邮箱格式错误）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt8.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_mailvcode4: 发送邮箱验证码（邮箱参数为空）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
 <tr id='total_row'>
     <td>Total</td>
-    <td>34</td>
-    <td>34</td>
+    <td>41</td>
+    <td>41</td>
     <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>

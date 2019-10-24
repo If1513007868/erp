@@ -22,6 +22,20 @@ class EplaceVerify(unittest.TestCase):
         # 检验联系人是否获取成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '验证成功')
+#token为空
+    def test_pwdtoken(self):
+        u'''token为空 '''
+        url = host + "user/auth/replaceVerify"
+        data = {"password": "123456","type": "password"}
+        res = requests.post(url,data,)
+        res.content.decode('utf-8')
+        result = res.json()
+        # 打印联系人列表
+        #print(res.json())
+
+        # 检验联系人是否获取成功
+        self.assertEqual(result["code"], '403012')
+        self.assertEqual(result["msg"], '非授权访问，无效的token')
 
 # 更换手机号身份验证（密码为空）
     def test_password1(self):

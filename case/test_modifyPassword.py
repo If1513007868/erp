@@ -24,6 +24,22 @@ class ModifyPassword(unittest.TestCase):
         # 检验联系人是否获取成功
         self.assertEqual(result["code"], '100100')
         self.assertEqual(result["msg"], '密码修改成功')
+
+# 没有token
+    def test_modpwdtoken(self):
+        u'''没有token'''
+        url = host + "user/auth/modifyPassword"
+        data = {"oldPassword": "123456", "newPassword": "123456"}
+        res = requests.post(url, data)
+        res.content.decode('utf-8')
+        result = res.json()
+        # 打印联系人列表
+        #print(res.json())
+
+        # 检验联系人是否获取成功
+        self.assertEqual(result["code"], '403012')
+        self.assertEqual(result["msg"], '非授权访问，无效的token')
+
 #原密码不正确
     def test_modpwd1(self):
         u'''原密码不正确'''

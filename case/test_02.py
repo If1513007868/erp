@@ -10,8 +10,9 @@ class Obtain_Contact(unittest.TestCase):
 #获取联系人列表
 
     def test_contact_list(self):
-        url = "http://172.16.20.152:7040/api/ec/user/auth/replaceVerify"
-        data = {"password": "1234","type": "password"}
+
+        url = "http://172.16.20.152:7040/api/ec/user/auth/sendMailVCode"
+        data = {"mail": "756016656@qq.com"}
         hearders = {
 
             "Authorization": refreshToken
