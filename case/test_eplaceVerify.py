@@ -3,13 +3,13 @@ import requests
 from case.login_bzj import host
 from case.login_bzj import refreshToken
 
-class ModifyPassword(unittest.TestCase):
+class EplaceVerify(unittest.TestCase):
     hearders = {
 
         "Authorization": refreshToken
     }
 # 更换手机号身份验证（密码）
-    def test_modpwd(self):
+    def test_password(self):
         u'''更换手机号身份验证（密码）'''
         url = host + "user/auth/replaceVerify"
         data = {"password": "123456","type": "password"}
@@ -24,7 +24,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["msg"], '验证成功')
 
 # 更换手机号身份验证（密码为空）
-    def test_modpwd1(self):
+    def test_password1(self):
         u'''更换手机号身份验证（密码密码为空）'''
         url = host + "user/auth/replaceVerify"
         data = {"password": "","type": "password"}
@@ -39,7 +39,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["msg"], '服务错误，请稍后重试！（null）')
 
 # 更换手机号身份验证（密码不正确）
-    def test_modpwd2(self):
+    def test_password2(self):
         u'''更换手机号身份验证（密码不正确）'''
         url = host + "user/auth/replaceVerify"
         data = {"password": "1234","type": "password"}
@@ -53,7 +53,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["code"], '403002')
         self.assertEqual(result["msg"], '密码不匹配,禁止操作')
 # 更换手机号身份验证（手机号）
-    def test_modpwd3(self):
+    def test_phone(self):
         u'''更换手机号身份验证（手机号）'''
         url = host + "user/auth/replaceVerify"
         data = {"phone": "15130078689","type": "phone","vcode": "7779"}
@@ -68,7 +68,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["msg"], '验证成功')
 
 # 更换手机号身份验证（手机号为空）
-    def test_modpwd4(self):
+    def test_phone1(self):
         u'''更换手机号身份验证（手机号为空）'''
         url = host + "user/auth/replaceVerify"
         data = {"phone": "","type": "phone","vcode": "7779"}
@@ -83,7 +83,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["msg"], '缺少参数!')
 
 # 更换手机号身份验证（手机号不正确）
-    def test_modpwd5(self):
+    def test_phone2(self):
         u'''更换手机号身份验证（手机号不正确）'''
         url = host + "user/auth/replaceVerify"
         data = {"phone": "1513000001","type": "phone","vcode": ""}
@@ -98,7 +98,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["msg"], '手机号码不正确')
 
 # 更换手机号身份验证（验证码为空）
-    def test_modpwd6(self):
+    def test_phone3(self):
         u'''更换手机号身份验证（手机号不正确）'''
         url = host + "user/auth/replaceVerify"
         data = {"phone": "15130078689","type": "phone","vcode": ""}
@@ -112,7 +112,7 @@ class ModifyPassword(unittest.TestCase):
         self.assertEqual(result["code"], '400 BAD_REQUEST')
         self.assertEqual(result["msg"], '缺少参数!')
 # 更换手机号身份验证（验证码不正确）
-    def test_modpwd7(self):
+    def test_phone4(self):
         u'''更换手机号身份验证（手机号不正确）'''
         url = host + "user/auth/replaceVerify"
         data = {"phone": "15130078689","type": "phone","vcode": "123"}

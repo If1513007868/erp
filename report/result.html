@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>我的自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-10-23 11:59:12</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:03.722746</p>
-<p class='attribute'><strong>Status:</strong> Pass 21</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-10-24 09:18:33</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:06.506124</p>
+<p class='attribute'><strong>Status:</strong> Pass 34</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -342,59 +342,65 @@ pt2.3:
 </tr>
 
 <tr class='passClass'>
+    <td>test_eplaceVerify.EplaceVerify</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',8)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_password: 更换手机号身份验证（密码）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_password1: 更换手机号身份验证（密码密码为空）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_password2: 更换手机号身份验证（密码不正确）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone: 更换手机号身份验证（手机号）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone1: 更换手机号身份验证（手机号为空）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone2: 更换手机号身份验证（手机号不正确）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone3: 更换手机号身份验证（手机号不正确）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_phone4: 更换手机号身份验证（手机号不正确）</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
     <td>test_getUserInfo.Get_Userinfo</td>
     <td>3</td>
     <td>3</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',3)">Detail</a></td>
-</tr>
-
-<tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_getuser: 根据ID获取用户信息</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
-        pass</a>
-
-    <div id='div_pt4.1' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-pt4.1: 
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt4.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_getuser1: ID为空</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt4.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_getuser2: token为空</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_login.Verify_login</td>
-    <td>7</td>
-    <td>7</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c5',7)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
 </tr>
 
 <tr id='pt5.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login1: 登录用例，正确账号密码</div></td>
+    <td class='none'><div class='testcase'>test_getuser: 根据ID获取用户信息</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -418,39 +424,116 @@ pt5.1:
 </tr>
 
 <tr id='pt5.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_login2: 登录用例，账号正确，密码错误</div></td>
+    <td class='none'><div class='testcase'>test_getuser1: ID为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_getuser2: token为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_login.Verify_login</td>
+    <td>7</td>
+    <td>7</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',7)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login1: 登录用例，正确账号密码</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login2: 登录用例，账号正确，密码错误</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt6.3' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login3: 登录用例，账号正确，密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt5.4' class='hiddenRow'>
+<tr id='pt6.4' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login4: 登录用例，账号密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt5.5' class='hiddenRow'>
+<tr id='pt6.5' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login5: 登录用例，账号密码为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt5.6' class='hiddenRow'>
+<tr id='pt6.6' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login6: 登录用例，账号密码为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt5.7' class='hiddenRow'>
+<tr id='pt6.7' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login7: 登录用例，账号密码为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_modifyPassword.ModifyPassword</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',5)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwd: 修改密码</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwd1: 原密码不正确</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt7.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwd2: 新旧密码为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt7.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwd3: 旧密码为空</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt7.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modpwd4: 旧密码为空</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>21</td>
-    <td>21</td>
+    <td>34</td>
+    <td>34</td>
     <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
