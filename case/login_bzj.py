@@ -1,17 +1,18 @@
 #/login登录管理   /login
 import unittest
 import requests
+import json
 
 s = requests.sessions
-host ='http://172.16.20.152:7040/api/ec/'
+host ='http://47.92.148.85:7040/api/erp/'
 
-#定义一个全局变量
+# 定义一个全局变量
 # def text():
 #     global host
-#     host = "C语言中文网"
+#     host = "http://47.92.33.214:7040/api/erp/"
 #     print("函数体内访问：", host)
-#text()
-print('函数体外访问：', host)
+# text()
+# print('函数体外访问：', host)
 
 class Bzj_login(unittest.TestCase):
 
@@ -43,9 +44,9 @@ class Bzj_login(unittest.TestCase):
         return res.json()
 
 #获取token
-test = Bzj_login()
-res = test.login(15130078689, 123456)
-getToken = res['result']['token']
+# test = Bzj_login()
+# res = test.login(13700000001, 123456)
+# getToken = res['result']['token']
 
 if __name__ == "__main__":
     unittest.main()

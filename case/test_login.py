@@ -13,24 +13,25 @@ class Verify_login(unittest.TestCase):
     def test_login1(self):
         u'''登录用例，正确账号密码'''
         self.log.info("----------start!----------")
-        phone = "15130078689"
+        self.log.info("测试用例：{}".format('test_login1'))
+        phone = "18766666664"
         credential = "123456"
         result = self.ver.login(phone,credential)
 
-        self.log.info(u'''调取登录方法，获取结果：%s'''%result)
+        #self.log.info(u'''调取登录方法，获取结果：%s'''%result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
         # 在调用函数后打印返回值
         #print(result)
         self.assertEqual(result["code"], '100100')      #拿结果断言
         self.assertEqual(result["msg"],'请求成功' )
-        self.assertEqual(result["result"]["phone"],"15130078689")
+        self.assertEqual(result["result"]["phone"],"18766666664")
         self.log.info("----------end!----------")
 
 #2.账号正确，密码错误
     def test_login2(self):
         u'''登录用例，账号正确，密码错误'''
         self.log.info("----------start!----------")
-        phone = "15130078689"
+        phone = "18766666664"
         credential = "1234567123"
         result = self.ver.login(phone, credential)
 
@@ -52,7 +53,7 @@ class Verify_login(unittest.TestCase):
         self.log.info(u'''调取登录方法，获取结果：%s''' % result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
         self.assertEqual(result["code"], '403001')
-        self.assertEqual(result["msg"], '用户不存在!')
+        self.assertEqual(result["msg"], '用户不存在或被禁用!')
         self.log.info("----------end!----------")
 
 #4.账号密码错误
@@ -66,7 +67,7 @@ class Verify_login(unittest.TestCase):
         self.log.info(u'''调取登录方法，获取结果：%s''' % result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
         self.assertEqual(result["code"], '403001')
-        self.assertEqual(result["msg"], '用户不存在!')
+        self.assertEqual(result["msg"], '用户不存在或被禁用!')
         self.log.info("----------end!----------")
 
 # 4.账号密码为空
@@ -79,8 +80,8 @@ class Verify_login(unittest.TestCase):
 
         self.log.info(u'''调取登录方法，获取结果：%s''' % result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
-        self.assertEqual(result["code"], '401002')
-        self.assertEqual(result["msg"], '参数为空')
+        self.assertEqual(result["code"], '406001')
+        self.assertEqual(result["msg"], '操作失败(增删改查)')
         self.log.info("----------end!----------")
 
 # 4.账号密码为空
@@ -93,8 +94,8 @@ class Verify_login(unittest.TestCase):
 
         self.log.info(u'''调取登录方法，获取结果：%s''' % result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
-        self.assertEqual(result["code"], '401002')
-        self.assertEqual(result["msg"], '参数为空')
+        self.assertEqual(result["code"], '406001')
+        self.assertEqual(result["msg"], '操作失败(增删改查)')
         self.log.info("----------end!----------")
 
 # 4.账号密码为空
@@ -107,8 +108,8 @@ class Verify_login(unittest.TestCase):
 
         self.log.info(u'''调取登录方法，获取结果：%s''' % result)
         self.log.info(u'''获取是否登录成功：%s''' % result['msg'])
-        self.assertEqual(result["code"], '401002')
-        self.assertEqual(result["msg"], '参数为空')
+        self.assertEqual(result["code"], '406001')
+        self.assertEqual(result["msg"], '操作失败(增删改查)')
         self.log.info("----------end!----------")
 
 
