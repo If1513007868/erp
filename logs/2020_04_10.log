@@ -1,0 +1,23 @@
+[2020-04-10 16:41:29,250] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,477] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '100100', 'msg': '请求成功', 'result': {'userId': 189, 'username': '李小程', 'phone': '15130078689', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjE1MTMwMDc4Njg5IiwidXNlcl9uYW1lIjoiMTUxMzAwNzg2ODkiLCJvcGVuaWQiOm51bGwsInNjb3BlIjpbInNlcnZpY2UiXSwibmFtZSI6IuadjuWwj-eoiyIsImV4cCI6MTU4NjU5NDQ4OSwiYXV0aFR5cGUiOiJwYXNzd29yZCIsInVzZXJJZCI6MTg5LCJqdGkiOiIzZDkwNGI2Yy0xNmM2LTRhZTEtOTBhMC1hMDQ3Y2NhNzBlN2QiLCJvcmdJZCI6NzMsImNsaWVudF9pZCI6ImVjLWFwaS1zZXJ2aWNlIn0.kyzN1cOqHE0XaIXhnHFD_plnwQGlh0UQ1LeyXmL2jVg', 'orgId': 73, 'orgName': '北京三星总公司', 'roleId': 94, 'modelSystems': [{'id': 5, 'name': '寿险', 'position': 'life-insurance'}]}}
+[2020-04-10 16:41:29,478] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-10 16:41:29,480] - logger.py] - INFO: ----------end!----------
+[2020-04-10 16:41:29,481] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,644] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '403006', 'msg': '账号或密码错误', 'result': False}
+[2020-04-10 16:41:29,645] - logger.py] - INFO: 获取是否登录成功：账号或密码错误
+[2020-04-10 16:41:29,646] - logger.py] - INFO: ----------end!----------
+[2020-04-10 16:41:29,648] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,702] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '403001', 'msg': '用户不存在或被禁用!', 'result': False}
+[2020-04-10 16:41:29,703] - logger.py] - INFO: 获取是否登录成功：用户不存在或被禁用!
+[2020-04-10 16:41:29,708] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,752] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '403001', 'msg': '用户不存在或被禁用!', 'result': False}
+[2020-04-10 16:41:29,753] - logger.py] - INFO: 获取是否登录成功：用户不存在或被禁用!
+[2020-04-10 16:41:29,754] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,803] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '406001', 'msg': '操作失败(增删改查)', 'result': False}
+[2020-04-10 16:41:29,803] - logger.py] - INFO: 获取是否登录成功：操作失败(增删改查)
+[2020-04-10 16:41:29,806] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,847] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '406001', 'msg': '操作失败(增删改查)', 'result': False}
+[2020-04-10 16:41:29,848] - logger.py] - INFO: 获取是否登录成功：操作失败(增删改查)
+[2020-04-10 16:41:29,851] - logger.py] - INFO: ----------start!----------
+[2020-04-10 16:41:29,889] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '406001', 'msg': '操作失败(增删改查)', 'result': False}
+[2020-04-10 16:41:29,890] - logger.py] - INFO: 获取是否登录成功：操作失败(增删改查)

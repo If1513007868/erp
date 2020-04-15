@@ -1,0 +1,46 @@
+[2020-04-13 09:10:50,303] - logger.py] - INFO: ----------start!----------
+[2020-04-13 11:02:55,476] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,305] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,361] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,392] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,423] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,453] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,482] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:04:23,515] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:09:31,281] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:10:00,903] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:11:28,462] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:11:28,883] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '100100', 'msg': '请求成功', 'result': {'userId': 153, 'username': '李华', 'phone': '13700000001', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEzNzAwMDAwMDAxIiwidXNlcl9uYW1lIjoiMTM3MDAwMDAwMDEiLCJvcGVuaWQiOm51bGwsInNjb3BlIjpbInNlcnZpY2UiXSwibmFtZSI6IuadjuWNjiIsImV4cCI6MTU4Njg0MTA4OSwiYXV0aFR5cGUiOiJwYXNzd29yZCIsInVzZXJJZCI6MTUzLCJqdGkiOiJmNTBjMmU2My0yMTUyLTRiYzEtOWU4Zi03ZDk0ZWVhNGQ3NjUiLCJvcmdJZCI6NDcsImNsaWVudF9pZCI6ImVjLWFwaS1zZXJ2aWNlIn0.983f8JSQ4EMx4azknsn0LDh90rdZzZ9Q-cvEF9V_adI', 'orgId': 47, 'orgName': '华为', 'roleId': 70, 'modelSystems': [{'id': 5, 'name': '寿险', 'position': 'life-insurance'}, {'id': 7, 'name': '非车险', 'position': 'non-car-insurance'}, {'id': 6, 'name': '车险', 'position': 'car-insurance'}]}}
+[2020-04-13 13:11:28,884] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:12:46,054] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:12:46,417] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '100100', 'msg': '请求成功', 'result': {'userId': 204, 'username': '吴石家', 'phone': '18766666664', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjE4NzY2NjY2NjY0IiwidXNlcl9uYW1lIjoiMTg3NjY2NjY2NjQiLCJvcGVuaWQiOm51bGwsInNjb3BlIjpbInNlcnZpY2UiXSwibmFtZSI6IuWQtOefs-WutiIsImV4cCI6MTU4Njg0MTE2NiwiYXV0aFR5cGUiOiJwYXNzd29yZCIsInVzZXJJZCI6MjA0LCJqdGkiOiIxZWQ2ZDkyNy1lMDIwLTQyMDMtYmU0MS05NzdhODgwNmFkMTkiLCJvcmdJZCI6ODQsImNsaWVudF9pZCI6ImVjLWFwaS1zZXJ2aWNlIn0.1jur1DpqNVymgesbzVSHbiQlI9szLFjPfqEXO-o4FJk', 'orgId': 84, 'orgName': '河北车险总队', 'roleId': 102, 'modelSystems': [{'id': 6, 'name': '车险', 'position': 'car-insurance'}, {'id': 5, 'name': '寿险', 'position': 'life-insurance'}]}}
+[2020-04-13 13:12:46,418] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:13:08,983] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:13:09,332] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '100100', 'msg': '请求成功', 'result': {'userId': 204, 'username': '吴石家', 'phone': '18766666664', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjE4NzY2NjY2NjY0IiwidXNlcl9uYW1lIjoiMTg3NjY2NjY2NjQiLCJvcGVuaWQiOm51bGwsInNjb3BlIjpbInNlcnZpY2UiXSwibmFtZSI6IuWQtOefs-WutiIsImV4cCI6MTU4Njg0MTE4OSwiYXV0aFR5cGUiOiJwYXNzd29yZCIsInVzZXJJZCI6MjA0LCJqdGkiOiJmYTk2YjgyMS1jYTAwLTRiNGYtYjU2NC1kNjM3NjM5NmQxNWIiLCJvcmdJZCI6ODQsImNsaWVudF9pZCI6ImVjLWFwaS1zZXJ2aWNlIn0.rDx2tsRl8TYCQAMBw3-yPpwEVlJEzeaHBkSJY1IY5bs', 'orgId': 84, 'orgName': '河北车险总队', 'roleId': 102, 'modelSystems': [{'id': 6, 'name': '车险', 'position': 'car-insurance'}, {'id': 5, 'name': '寿险', 'position': 'life-insurance'}]}}
+[2020-04-13 13:13:09,332] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:13:09,334] - logger.py] - INFO: ----------end!----------
+[2020-04-13 13:13:52,195] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:13:52,488] - logger.py] - INFO: 调取登录方法，获取结果：{'code': '100100', 'msg': '请求成功', 'result': {'userId': 204, 'username': '吴石家', 'phone': '18766666664', 'token': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjE4NzY2NjY2NjY0IiwidXNlcl9uYW1lIjoiMTg3NjY2NjY2NjQiLCJvcGVuaWQiOm51bGwsInNjb3BlIjpbInNlcnZpY2UiXSwibmFtZSI6IuWQtOefs-WutiIsImV4cCI6MTU4Njg0MTIzMiwiYXV0aFR5cGUiOiJwYXNzd29yZCIsInVzZXJJZCI6MjA0LCJqdGkiOiJlNzc3NzE3OC05N2JjLTQzOGUtOTVlOC01ZjcyZWMwZDQ2MTkiLCJvcmdJZCI6ODQsImNsaWVudF9pZCI6ImVjLWFwaS1zZXJ2aWNlIn0.mwIkC5VW4OOlRnT7aPIqtA9KdKbIropK6jDzv_H6kWU', 'orgId': 84, 'orgName': '河北车险总队', 'roleId': 102, 'modelSystems': [{'id': 6, 'name': '车险', 'position': 'car-insurance'}, {'id': 5, 'name': '寿险', 'position': 'life-insurance'}]}}
+[2020-04-13 13:13:52,489] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:13:52,490] - logger.py] - INFO: ----------end!----------
+[2020-04-13 13:14:25,096] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:14:25,398] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:14:25,399] - logger.py] - INFO: ----------end!----------
+[2020-04-13 13:35:17,506] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:35:18,124] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:35:18,125] - logger.py] - INFO: ----------end!----------
+[2020-04-13 13:53:00,775] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:53:02,267] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:53:02,267] - logger.py] - INFO: ----------end!----------
+[2020-04-13 13:54:10,491] - logger.py] - INFO: ----------start!----------
+[2020-04-13 13:54:10,945] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 13:54:10,945] - logger.py] - INFO: ----------end!----------
+[2020-04-13 14:06:04,114] - logger.py] - INFO: ----------start!----------
+[2020-04-13 14:06:05,434] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 14:06:05,435] - logger.py] - INFO: ----------end!----------
+[2020-04-13 14:06:49,299] - logger.py] - INFO: ----------start!----------
+[2020-04-13 14:06:50,218] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 14:06:50,219] - logger.py] - INFO: ----------end!----------
+[2020-04-13 14:08:32,725] - logger.py] - INFO: ----------start!----------
+[2020-04-13 14:08:33,233] - logger.py] - INFO: 获取是否登录成功：请求成功
+[2020-04-13 14:08:33,233] - logger.py] - INFO: ----------end!----------
